@@ -23,6 +23,8 @@ def convert_image(input_file, output_file=None, output_format="png"):
 
         temp_img.save(output_image_path)
 
+        print(f"{input_file} was converted succesfully into {output_image_path}")
+
     else:
         print("This file format is not supported yet:(")
     
@@ -30,7 +32,7 @@ def convert_image(input_file, output_file=None, output_format="png"):
 
 
 def main():
-    print(convert_image("IMG_1815"))
+    convert_image("IMG_1815")
 
 if __name__ == "__main__":
     main()
