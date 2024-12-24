@@ -7,7 +7,7 @@ Python package for image handling, mainly conversion between different image typ
 The only dependency in this project is `pilow-heif`, which can be obtained by doing
 
 ```bash
-pip install pillo-heif
+pip install pillow-heif
 ```
 
 In order to run as a batch script from anywhere in the computer (accesing from the terminal), refer to my other repository PDF-Editor, which defines the following steps:
