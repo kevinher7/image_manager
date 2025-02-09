@@ -16,10 +16,11 @@ def compress_image(input_file, downscale_factor=2, output_file=None, quality=1, 
     input_image_path = get_image_path_from_name(input_file, file_format)
 
     temp_img = Image.open(input_image_path)
-    img_height = temp_img.height/downscale_factor
-    img_width = temp_img.width/downscale_factor
+    img_height = int(temp_img.height/downscale_factor)
+    img_width = int(temp_img.width/downscale_factor)
+    # the resize does not accept floats
 
-    image = temp_img.resize((img_width, img_height), resampling)
+    output_image = temp_img.resize((img_width, img_height), resampling)
 
     output_path = ""
 
@@ -29,7 +30,7 @@ def compress_image(input_file, downscale_factor=2, output_file=None, quality=1, 
     else:
         output_path = f"{output_file}.{file_format}"
 
-    temp_img.save(output_path)
+    output_image.save(output_path)
 
     print(f"\n{input_file} was converted compressed into {output_path}")
 
