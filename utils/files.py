@@ -7,7 +7,7 @@ def ensure_image_extension(file_name, extension):
     # Default behavior when no extension is given: assume it is a HEIC image
 
     if "." not in file_name:
-        file_name = file_name + extension
+        file_name = f"{file_name}.{extension}"
     else:
         file_extension = file_name.split(".")[-1].lower()
 
