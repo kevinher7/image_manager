@@ -32,7 +32,7 @@ def compress_image(input_file, downscale_factor=2, output_file=None, quality=1, 
 
     output_image.save(output_path)
 
-    print(f"\n{input_file} was converted compressed into {output_path}")
+    print(f"\n{input_file} was converted compressed into {output_path}\n")
 
     return 0
 
