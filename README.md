@@ -24,7 +24,7 @@ set PYTHONPATH=C:\kev-scripts
 
 :GETOPTS
 
-cmd /k python -m image_manager.image_converter.image_converter %*
+cmd /c python -m image_manager.image_converter.image_converter %*
 exit /B
 ```
 
